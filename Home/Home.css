@@ -1,0 +1,122 @@
+/*----- ヘッダー -----*/
+header{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
+
+#header-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: absolute;
+}
+
+#header-title{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: "Monotype Corsiva", fantasy;
+    margin-left: 40px;
+    z-index: 999;
+}
+
+#humberger-button{
+    width: 50px;
+    height: 35px;
+    border-radius: 3px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+
+}
+
+#humberger-button #top-line, #middle-line,  #buttom-line{
+    display: block;
+    width: 85%;
+    height: 2px;
+    margin: 5px 0;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#header-nav{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    position: fixed;    
+    z-index: 999;
+}
+
+    #header-nav #header-nav-items{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+        #header-nav #header-nav-items li{                        
+            margin: 30px 0;   
+            z-index: 992;
+        } 
+
+            #header-nav ul li a{
+                font-size: 30px;
+                font-weight: bold;
+                color: #fff;
+                z-index: 992;
+            }     
+
+    #header-nav #nav-close-button{
+        display: block;
+        width: 50px;/*枠の大きさ*/
+        height: 50px;/*枠の大きさ*/
+        background: #000;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+    }
+    
+    #header-nav #nav-close-button::before, #nav-close-button::after{
+        content: "";
+        display: block;
+        width: 100%;/*バツ線の長さ*/
+        height: 3px;/*バツ線の太さ*/
+        background: #fff;
+        transform: rotate(45deg);
+        transform-origin:0% 50%;
+        position: absolute;
+        top: calc(14% - 5px);
+        left: 14%;
+    }
+    
+    #header-nav #nav-close-button::after{
+        transform: rotate(-45deg);
+        transform-origin:100% 50%;
+        left: auto;
+        right: 14%;
+    }
+
+            
+
+
+
+/*----- ホーム -----*/
+
+#home-img{
+    width: 100vw;
+    height: 100vh;
+}
+
+#home-img img{
+    width: 100%;
+    height: 100%;
+}
