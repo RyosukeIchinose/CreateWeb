@@ -1,8 +1,26 @@
+/*----- 共通 -----*/
+
+.section{
+    margin: 50px 0;
+}
+
+.section-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title{
+    font-family: "Coursive Nuw", monospace;
+    font-size: 40px;
+}
+
 /*----- ヘッダー -----*/
 header{
     width: 100%;
     height: 100vh;
     position: fixed;
+    z-index: 998;
 }
 
 #header-container{
@@ -20,7 +38,6 @@ header{
     font-weight: 900;
     font-family: "Monotype Corsiva", fantasy;
     margin-left: 40px;
-    z-index: 999;
 }
 
 #humberger-button{
@@ -32,7 +49,6 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 999;
 
 }
 
@@ -46,12 +62,11 @@ header{
 }
 
 #header-nav{
-    display: block;
+    display: none;
     width: 100vw;
     height: 100vh;
     background-color: #000000;
-    position: fixed;    
-    z-index: 999;
+    position: fixed;
 }
 
     #header-nav #header-nav-items{
@@ -64,15 +79,13 @@ header{
     }
 
         #header-nav #header-nav-items li{                        
-            margin: 30px 0;   
-            z-index: 992;
+            margin: 30px 0;
         } 
 
             #header-nav ul li a{
                 font-size: 30px;
                 font-weight: bold;
                 color: #fff;
-                z-index: 992;
             }     
 
     #header-nav #nav-close-button{
@@ -83,6 +96,7 @@ header{
         position: fixed;
         top: 30px;
         right: 30px;
+        cursor: pointer;
     }
     
     #header-nav #nav-close-button::before, #nav-close-button::after{
@@ -105,18 +119,53 @@ header{
         right: 14%;
     }
 
-            
-
-
 
 /*----- ホーム -----*/
 
-#home-img{
+
+#home-img-container{
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
-#home-img img{
-    width: 100%;
-    height: 100%;
+    #home-img-container img{
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #home-img-container #home-img2, #home-img3, #home-img4 {
+        opacity: 0;
+    }
+
+#home-title{
+    color: #FFF;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*----- About Us -----*/
+
+.section-container #about-title{
+    margin: 0 0 50px 0;
+}
+
+.section-container p{
+    text-align: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.section-container p span{
+    padding: 10px 0;
+    text-align: center;
 }
